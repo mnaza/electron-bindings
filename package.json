@@ -1,0 +1,41 @@
+{
+  "name": "electron-bindings",
+  "version": "1.0.0",
+  "main": "bindings-compiled.js",
+  "description": "",
+  "author": "Ravi Shrestha <rvreturn@gmail.com>",
+  "repository": "https://github.com/raviSussol/electron-bindings.git",
+  "license": "MIT",
+  "keywords": [
+    "Electron",
+    "Nodejs",
+    "Javascript"
+  ],
+  "engines": {
+    "node": ">=10"
+  },
+  "scripts": {
+    "clean": "del-cli bindings-compiled.js",
+    "prebuild": "yarn clean",
+    "build": "babel bindings.js --out-file bindings-compiled.js --presets=@babel/env",
+    "dev": "yarn build --watch",
+    "prepublish": "yarn build",
+    "release": "np",
+    "test": "echo test",
+    "lint": "eslint --cache . --ignore-path .gitignore --ignore-pattern node_modules --ignore-pattern lib --ext .js"
+  },
+  "dependencies": {
+    "node-gyp-build": "^4.2.3"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.13.16",
+    "@babel/core": "^7.14.2",
+    "@babel/node": "^7.14.2",
+    "@babel/preset-env": "^7.14.2",
+    "babel-eslint": "^10.1.0",
+    "del-cli": "^3.0.1",
+    "eslint": "^7.26.0",
+    "np": "^7.5.0",
+    "watch": "^1.0.2"
+  }
+}
