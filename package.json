@@ -1,6 +1,6 @@
 {
   "name": "electron-bindings",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "bindings-compiled.js",
   "description": "",
   "author": "Ravi Shrestha <rvreturn@gmail.com>",
