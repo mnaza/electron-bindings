@@ -24,8 +24,11 @@
     "test": "echo test",
     "lint": "eslint --cache . --ignore-path .gitignore --ignore-pattern node_modules --ignore-pattern lib --ext .js"
   },
-  "dependencies": {
+  "peerDependencies": {
     "node-gyp-build": "^4.2.3"
+  },
+  "optionalDependencies": {
+    "electron": "^12.0.7"
   },
   "devDependencies": {
     "@babel/cli": "^7.13.16",
