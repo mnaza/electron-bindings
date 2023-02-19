@@ -21,7 +21,7 @@ const getLibPath = nativePath => {
     throw new Error('Not running in an Electron environment!');
   }
   const { app } = electron;
-  const nodeModulesDir = resolve(app.isPackaged ? app.getAppPath() : process.cwd(), 'node_modules');
+  const nodeModulesDir = resolve(process.cwd(), 'node_modules');
   const libPath = resolve(nodeModulesDir, nativePath);
   if (existsSync(nodeModulesDir)) {
     if (existsSync(libPath)) {
